@@ -24,11 +24,11 @@ img{
 
 .wrapper{
     background-size:cover;
-    width: 100vw;
+    width: 100%;
     height: fit-content;
     display:grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;
-    grid-template-rows: 0.5fr 4fr 0.5fr;
+    grid-template-rows: 0.5fr 4fr 0.25fr;
     grid-template-areas: 
     'hd hd hd hd '
     'mn mn mn mn'
@@ -51,8 +51,8 @@ main{
 }
 
 footer{
-    width:50vw;
-    justify-content: space-around;
+    display:flex;
+    justify-content: space-evenly;
     grid-area: ft;
     background-color: rgb(100, 100, 100);
 }
@@ -67,10 +67,10 @@ a:hover{
 
 /* Texts */
 h1{
-font-size: 3rem;
+font-size: clamp(1%, 16px 16px);
 }
 p{
-    font-size: 1.5vw;
+    font-size: clamp(1.5vw, 16px, 16px);
 }
 
 
@@ -103,7 +103,7 @@ p{
 }
 .card_image{
     height: auto;
-    width: 40vh;
+    width: 100%;
     justify-self:center;
 }
 
