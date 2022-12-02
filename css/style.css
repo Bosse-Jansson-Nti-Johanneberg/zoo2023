@@ -112,3 +112,15 @@ p{
 .employeetitle{
     text-align:center;
 }
+
+
+
+/* Menu page */
+.meny{
+    display:grid;
+    grid-template-rows: 1fr 1fr 4fr;
+    grid-template-areas: 
+    'Meny_title Meny_title'
+    'Meny_options Meny_options'
+    'Mat Dryck';
+}
