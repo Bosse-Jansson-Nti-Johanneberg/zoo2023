@@ -15,6 +15,7 @@ body{
    /* overflow-x:hidden; */
     margin:0px;
     background-image: url("/img/animals/meerkats-zoo-animals-zoological-garden-preview.jpeg");
+    background-size: 100vw 100vh;
 }
 
 
@@ -52,7 +53,8 @@ main{
 
 footer{
     display:flex;
-    justify-content: space-evenly;
+    justify-content: center;
+    align-self:baseline;
     grid-area: ft;
     background-color: rgb(100, 100, 100);
 }
@@ -80,7 +82,7 @@ p{
 
 /* Main page */
 .main_cards{
-
+    overflow:hidden;
     margin-top:3%;
     padding-left:5px;
 
