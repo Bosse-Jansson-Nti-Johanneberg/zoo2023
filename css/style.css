@@ -1,0 +1,112 @@
+:root{
+    --background-color: white;
+    --main_blue: rgb(255, 255, 255);
+}
+
+
+.center{
+    height:fit-content;
+    justify-content:center;
+    align-items:center;
+}
+
+
+body{
+   /* overflow-x:hidden; */
+    margin:0px;
+    background-image: url("/img/animals/meerkats-zoo-animals-zoological-garden-preview.jpeg");
+}
+
+
+img{
+    border-radius: 0px 20px 0px 20px;
+}
+
+.wrapper{
+    background-size:cover;
+    width: 100vw;
+    height: fit-content;
+    display:grid;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0.5fr 4fr 0.5fr;
+    grid-template-areas: 
+    'hd hd hd hd '
+    'mn mn mn mn'
+    'ft ft ft ft';
+}
+
+header{
+    display: flex;
+    flex: space-between;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: hd;
+    color:white;
+    background: rgba(0, 0, 0, 0.8);
+    backdrop-filter: saturate(180%) blur(10px);
+}
+
+main{
+    grid-area: mn;
+}
+
+footer{
+    width:50vw;
+    justify-content: space-around;
+    grid-area: ft;
+    background-color: rgb(100, 100, 100);
+}
+
+a{
+    color:white;
+    text-decoration: underline;
+}
+a:hover{
+    color:grey;
+}
+
+/* Texts */
+h1{
+font-size: 3rem;
+}
+p{
+    font-size: 1.5vw;
+}
+
+
+
+
+
+
+/* Main page */
+.main_cards{
+
+    margin-top:3%;
+    padding-left:5px;
+
+    background: rgba(255, 255, 255, 0.8);
+    backdrop-filter: saturate(180%) blur(10px);
+
+    height: 1fr;
+    width: 8fr;
+
+    border: 1px black solid;
+    border-radius: 0px 40px 0px 40px;
+
+    display: grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-areas:
+    'cardtext cardright';
+}
+.cardright{
+    grid-area:cardright
+}
+.card_image{
+    height: auto;
+    width: 40vh;
+    justify-self:center;
+}
+
+.employeetitle{
+    text-align:center;
+}
