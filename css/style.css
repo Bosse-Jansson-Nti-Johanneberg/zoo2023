@@ -14,8 +14,6 @@
 body{
    /* overflow-x:hidden; */
     margin:0px;
-    background-image: url("/img/animals/meerkats-zoo-animals-zoological-garden-preview.jpeg");
-    background-size: 100vw 100vh;
 }
 
 
@@ -37,14 +35,15 @@ img{
     'hd hd hd hd '
     'mn mn mn mn'
     'ft ft ft ft';
+    background-image: url("/img/animals/meerkats-zoo-animals-zoological-garden-preview.jpeg");
+    background-size: 100vw 100vh;
 }
 
 #menu_page{
     height:100vh;
     grid-template-columns: 1fr 1fr;
-    grid-template-rows: 1fr 1fr 6fr;
+    grid-template-rows: 1fr 6fr;
     grid-template-areas: 
-    'Meny_title Meny_title'
     'meny_options meny_options'
     'Mat Dryck';
     backdrop-filter:saturate(180%) blur(10px);
