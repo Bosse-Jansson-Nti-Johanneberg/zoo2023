@@ -40,14 +40,14 @@ img{
 }
 
 #menu_page{
+    overflow:hidden;
     height:100vh;
     grid-template-columns: 1fr 1fr;
     grid-template-rows: 1fr 6fr;
     grid-template-areas: 
     'meny_options meny_options'
-    'Mat Dryck';
+    'menu menu';
     backdrop-filter:saturate(180%) blur(10px);
-
 }
 
 header{
@@ -147,16 +147,110 @@ h3:active{
     color:red;
 }
 
-button{
-    background-color: transparent;
-    border:none;
+
+
+
+.menu{
+    grid-area: menu;
 }
 
-.mat{
-    grid-area:mat;
+#lunch_page{
+    height:100%;
+    width:100%;
+
+    display:grid;
+    z-index:-1;
+    background-color:red;
+}
+#Middag_Page{
+    height:100%;
+    width:100%;
+
+    display:grid;
+    z-index:1;
     background-color:blue;
 }
-.dryck{
-    grid-area:dryck;
-    background-color:purple;
+#Extras_Page{
+    height:100%;
+    width:100%;
+
+    display:grid;
+    z-index:1;
+    background-color:green;
+}
+
+
+.lunchfocus{
+    opacity:0%;
+}
+
+ button{
+    background:none;
+    width:20%;
+    margin:5px;
+ }
+ button:hover{
+    box-shadow:1px 1px 1px black inset;
+ }
+button:active{
+    background-color:black;
+}
+
+
+.menu_section{
+    display:flex;
+    height:fit-content;
+    width:100vw;
+    flex-wrap: wrap;
+    flex-direction:row;
+    justify-content: space-around;
+    align-items:center;
+    position:absolute;
+}
+
+
+
+
+
+/* Menu items */
+
+.menu_item{
+    border:1px solid black;
+    border-radius: 10px;
+    width: 25%;
+    height: 40vh;
+    text-align:center;
+
+
+    display:grid;
+    grid-template-columns: 3fr 1fr;
+    grid-template-rows: 1fr 1fr 1fr;
+    grid-template-areas:
+    'itemtitle itemtitle'
+    'itemimg itemimg'
+    'itemdesc itemdesc'
+    'itemprice itemprice';
+
+    background-image:url(/img/persons/davidfrontfacing.png);
+    background-size: 100% 100%;
+    mix-blend-mode:color-burn;
+}
+
+.itemtitle{
+    grid-area:itemtitle;
+    text-align:center;
+}
+
+.itemimg{
+    grid-area:itemimg;
+    border:1px black solid;
+    text-align:center;
+    text-justify:center;
+
+}
+.itemdesc{
+    grid-area:itemdesc;
+}
+.itemprice{
+    grid-area:itemprice;
 }

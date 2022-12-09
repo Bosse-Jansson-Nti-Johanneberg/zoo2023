@@ -1,0 +1,423 @@
+/* General syntax: body, h1, etc */
+
+body {
+    background-color: var(--background_color);
+    background-size: 100vw, 100vh;
+    margin: 0px;
+    overflow-x:hidden;
+}
+
+
+header{
+    display: flex;
+    flex: space-between;
+    justify-content: space-around;
+    align-items: center;
+    grid-area: hd;
+    color:white;
+    background: rgba(0, 0, 0, 0.8);
+}
+a{
+    color:white;
+    text-decoration: underline;
+}
+nav {
+    grid-area: nav;
+    display: flex;
+    width: 101%;
+    height: fit-content;
+    text-align: center;
+}
+
+footer {
+    grid-area: ft;
+}
+
+main {
+    margin-left: 5%;
+    padding-left: 5%;
+    grid-area: mn;
+    width: fit-content;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+h1 {
+    color: white;
+}
+
+h2 {
+    font-size: 20px;
+    font-weight: 500;
+}
+
+button {
+    background-color: var(--background_color);
+    border: ridge;
+}
+
+input {
+    opacity: 100%;
+    width: fit-content;
+    height: 1.5em;
+}
+
+input:focus {
+    background-color: rgb(232, 232, 232);
+}
+
+iframe {
+    justify-content: center;
+    padding: 20px;
+    border: none;
+}
+
+
+
+/* Often used classes: Center, alwaysvisible etc */
+
+.mainitem{
+    flex-grow: 2;
+}
+.menubutton {
+    z-index: 3;
+    width: 15%;
+    height: 1em;
+    background-image: url(https://d338t8kmirgyke.cloudfront.net/icons/icon_pngs/000/010/744/original/menu.png);
+    box-shadow: 2px 2px 2px white;
+    background-color: rgb(101, 101, 101);
+    padding: 10px;
+    letter-spacing: 2px;
+    font-size: 20px;
+}
+
+.menubutton > .option3{
+    order:3;
+}
+
+.menubutton:hover {
+    background-color: darkgray
+}
+
+.container {
+    display: grid;
+    flex-direction: column-reverse;
+    align-content: space-between;
+    grid-column-gap: 100px;
+    grid-template-columns: 1fr 1fr 1fr 1fr; 
+    grid-template-areas:
+        'hd hd hd hd'
+        'nav nav nav nav'
+        'rw mn mn bk'
+        'ft ft ft ft';
+}
+
+.reviews {
+    grid-area: rw;
+    display: flex;
+    font-size: fit-content;
+    text-align: left;
+    flex-direction:column;
+    padding-left: 15px;
+    
+}
+
+.boka {
+    justify-self: left;
+    z-index: 0;
+    grid-area: bk;
+    color: black;
+    background-image: linear-gradient(to bottom, var(--background_color), saddlebrown);
+}
+
+.bokatitle {
+    color: black;
+}
+
+#reviewcontainer {
+    display: flex;
+    justify-content: center;
+    width: 100%;
+    padding: 10px;
+    border-left: rgba(255, 255, 255, .5) solid;
+    border-right: rgba(255, 255, 255, .5) solid;
+}
+
+#reviewcontent {
+    padding: 10px;
+}
+
+.page-wrap {
+    position: relative;
+}
+
+.sidebar {
+    position: fixed;
+}
+
+.image {
+    top: 10%;
+    padding: auto;
+    width: 800px;
+}
+
+.imageparent {
+    display: flex;
+    width: 10vh;
+
+}
+
+.center {
+    display: flex;
+    justify-content: center;
+    align-content: center;
+}
+
+.grid {
+    display: grid;
+}
+
+.fixed {
+    position: fixed;
+}
+
+.alwaysvisible {
+    z-index: 10;
+}
+
+.GoToHell {
+    animation: GoingToHell 2s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes GoingToHell {
+    0% {}
+
+    100% {
+        background-color: orangered;
+    }
+}
+
+/* Menu classes */
+.menu {
+    display: flexbox;
+    align-content: space-between;
+    left: -150px;
+    position: fixed;
+    background-color: rgb(219, 185, 63);
+    width: clamp(20px, 150px, 200px);
+    height: 60px;
+    display: grid;
+    row-gap: 10px;
+    position: fixed;
+    border-radius: 1px solid;
+    border-color: rgb(52, 40, 3);
+}
+
+.menuchild {
+    width: inherit;
+    height: 1px;
+    grid-column: 1;
+    margin: 0px;
+}
+
+.active {
+    background-color: rgb(193, 157, 30);
+}
+
+.menutext {
+    padding: 15px;
+    font-size: fit-content;
+}
+
+.menutext:hover {
+    animation: menuhover 0.2s linear;
+    animation-fill-mode: forwards;
+}
+
+@keyframes menuhover {
+    0% {}
+
+    100% {
+        background-color: rgb(193, 157, 30);
+
+    }
+}
+
+.menuopen {
+    animation: menuopener 0.01s ease-in-out infinite;
+    animation-fill-mode: backwards;
+}
+
+@keyframes menuopener {
+    0% {
+        background-color: red;
+        rotate: 0deg;
+        transform: TranslateX(0);
+
+    }
+
+    25% {
+        background-color: green;
+        rotate: 205deg;
+    }
+
+    50% {
+        background-color: blue;
+        rotate: 410deg;
+        transform: TranslateX(1800px);
+    }
+
+    75% {
+        background-color: brown;
+        rotate: 1200deg;
+    }
+
+    100% {
+        background-color: red;
+        opacity: 100%;
+        rotate: 100deg;
+        transform: TranslateX(0);
+    }
+}
+
+.menubutt {
+    background-image: url(https://static.thenounproject.com/png/14721-200.png);
+    background-color: rgb(202, 199, 199);
+    height: 10vh;
+    width: 10vh;
+    background-size: contain;
+    position: fixed;
+}
+
+.menubutt:hover {
+    animation: darken 0.2s linear;
+    animation-fill-mode: forwards;
+
+}
+
+@keyframes darken {
+    0% {}
+
+    100% {
+        background-color: rgb(255, 255, 255);
+    }
+}
+
+/* TOny sidan */
+.tony {
+    padding: 0px, 50px;
+    width: clamp(10px, 100vh, 100vh);
+    color: black;
+    font-size: 40px;
+}
+
+.tonydiv {
+    display: flex;
+    justify-content: center;
+    margin: auto;
+    text-align: center;
+}
+
+.konsumera {
+    color: red;
+    font-size: 50px;
+    text-shadow: -3px 2px rgb(87, 2, 2);
+    text-align: center;
+    padding: 0px;
+}
+
+.question {
+    background-color: white;
+    text-align: center;
+    color: black;
+    height: 100px;
+    margin: 0;
+}
+
+.star {
+    width: 5vw;
+}
+
+.submit {
+    margin-top: 20px;
+    width: 100px;
+    height: 40px;
+}
+
+
+/* Id¨s */
+#flextext{
+    align-self: center;
+    font-weight: 900;
+}
+#page {
+    width: 100vh;
+    height: 100vh;
+    display: grid;
+    grid-template-columns: auto;
+    grid-template-rows: 4;
+}
+
+#middle {
+    color: black;
+    width: 50%;
+    margin: auto;
+    text-align: center;
+    font-size: 10vh;
+    text-shadow: -2px 0 2px white, 0 -2px 2px white, 2px 0 2px white, 0 -2px 2px white;
+}
+
+#menutitle {
+    color: rgb(59, 59, 59);
+}
+
+#map {
+    width: 400px;
+    height: 200px;
+}
+
+#bottom {
+    width: 200vh;
+    height: 1000px;
+}
+
+
+#reviewtitle {
+    padding-left: 20px;
+    font-size: 3em;
+    color: black;
+    text-shadow: -1px 1px white;
+}
+
+#boka_container {
+    width: 200px;
+    height: fit-content;
+    padding: 10px;
+    border: 5px solid;
+    border-image: linear-gradient(to bottom, var(--background_color), rgb(43, 24, 0)) 1 1 1 1;
+}
+
+#starcont {
+    display:flex;
+    justify-content: space-around;
+    height: fit-content;
+    mix-blend-mode: color-burn;
+    padding: 10px;
+}
+
+
+/* About sidan */
+.welcometext{
+    margin:auto;
+    margin-top: 15vh;
+    align-self: center;
+    width: 50%;
+    justify-self:center;
+}
+
+.landingcontainer{
+border: 1px black sol
+}

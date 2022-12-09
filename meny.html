@@ -1,15 +1,30 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Restaurang Zooters</title>
     <link rel="stylesheet" href="css/style.css">
+    <script>
+        function lunch() {
+            alert("Lunch!!!!")
+            var element = document.getElementById('');
+            element.classList.toggle("lunchfocus");
+        }
+        function middag() {
+            alert("Middag")
+        }
+        function extra() {
+            alert("Tillägg")
+        }
+    </script>
 </head>
+
 <body class="menu">
     <header>
-        <h3> <a href="Om_oss.html">Om oss</a></h3>
+        <h3> <a href="omoss.html">Om oss</a></h3>
         <div class="title">
             <h1>Zooters meny</h1>
         </div>
@@ -17,21 +32,165 @@
     </header>
     <div class="wrapper" id="menu_page">
 
-            <section class="meny_options">
-                <button class="meny_option" value="Lunch"> <h3> Lunch </h3> </button>
-                <button class="meny_option" value="Middag"> <h3> Middag </h3> </button>
-                <button class="menyoption" value="Tillägg"> <h3> Tillägg </h3></button>
+        <section class="meny_options">
+            <button value="lunch" onclick="menu_page_change(this)"> Lunch</button>
+            <button value="middag" onclick="menu_page_change(this)"> Middag</button>
+            <button value="extras" onclick="menu_page_change(this)"> Tillägg</button>
+        </section>
+
+        <script>
+
+            function menu_page_change(e) {
+                console.log(e.value);
+                if (e.value == "lunch") {
+
+                    document.getElementById('middag').style.visibility = 'hidden';
+                    document.getElementById('extras').style.visibility = 'hidden';
+                    document.getElementById('lunch').style.visibility = 'visible';
+
+                } else if (e.value == "middag") {
+                    document.getElementById('lunch').style.visibility = 'hidden';
+                    document.getElementById('extras').style.visibility = 'hidden';
+                    document.getElementById('middag').style.visibility = 'visible';
+                } else if (e.value == "extras") {
+                    console.log("running extras")
+                    document.getElementById('lunch').style.visibility = 'hidden';
+                    document.getElementById('middag').style.visibility = 'hidden';
+                    document.getElementById('extras').style.visibility = 'visible';
+                }
+
+            }
+        </script>
+        <main class="menu">
+            <section id="lunch" class="menu_section">
+
+                <article class="menu_item">
+                   <div class="itemtitle"> <h2>Lunch item</h2></div>
+                   <div class="itemimg"> Image</div>
+                   <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                   <div class="itemprice"> 5kr</div>
+                </article>
+                <article class="menu_item">
+                    <div class="itemtitle"> <h2>Lunch item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Lunch item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Lunch item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Lunch item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Lunch item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
 
             </section>
-
-            <section class="mat">
+            <section id="middag" class="menu_section">
+                <article class="menu_item">
+                    <div class="itemtitle"> <h2>Middag item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Middag item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Middag item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Middag item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Middag item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Middag item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
 
             </section>
+            <section id="extras" class="menu_section">
+                <article class="menu_item">
+                    <div class="itemtitle"> <h2>Extras item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Extras item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Extras item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Extras item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Extras item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
+                 <article class="menu_item">
+                    <div class="itemtitle"> <h2>Extras item</h2></div>
+                    <div class="itemimg"> Image</div>
+                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
+                    <div class="itemprice"> 5kr</div>
+                 </article>
 
-            <section class="dryck">
+
+
+
+
+
 
             </section>
         </main>
     </div>
+    <footer>
+        <p> Copyright Zooters AB 2022 New Hampshire</p>
+    </footer>
 </body>
+
 </html>
