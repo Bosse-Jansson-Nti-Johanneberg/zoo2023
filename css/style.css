@@ -1,6 +1,6 @@
 :root{
     --background-color: white;
-    --main_blue: rgb(255, 255, 255);
+    --backdropfilter: 4px;
 }
 
 
@@ -24,7 +24,8 @@ img{
 .wrapper{
     background-size:cover;
     width: 100%;
-    display:grid;
+    height:fit-content;
+    overflow-y:hidden;
 }
 
 #about_page{
@@ -36,7 +37,7 @@ img{
     'mn mn mn mn'
     'ft ft ft ft';
     background-image: url("/img/animals/meerkats-zoo-animals-zoological-garden-preview.jpeg");
-    background-size: 100vw 100vh;
+    background-size: 100% 100%;
 }
 
 #menu_page{
@@ -82,25 +83,67 @@ a:hover{
 
 /* Texts */
 h1{
-font-size: clamp(1%, 16px 16px);
+font-size: clamp(1px, 16px 16px);
 }
 p{
     font-size: clamp(1.5vw, 16px, 16px);
 }
 
 
+/* Landing page */
+.landing_page_wrap{
+    height:100%;
+    width:100%;
+    display:grid;
+    grid-template-areas:
+    'iframe direc'
+    'about about'
+    ;
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: 2fr 1fr;
+}
+
+.Direc{
+    grid-template:direc;    
+    padding:5%;
+    font-size: 1.5em;
+}
+
+.about{
+    grid-template:about;
+    text-align:center;
+    font-size:1em;
+    justify-content: center;
+    align-items: center;
+    border-width: 4px;
+    border-style: solid;
+    border-image: linear-gradient(to bottom, black, white) 1;
+    border-right:none;
+}
 
 
 
 
-/* Main page */
+iframe {
+    justify-content: center;
+    padding: 2%;
+    border: none;
+}
+.map{
+width:100%;
+height: 50vh;
+}
+
+
+
+
+/* About page */
 .main_cards{
     overflow:hidden;
     margin-top:3%;
     padding-left:5px;
 
     background: rgba(255, 255, 255, 0.8);
-    backdrop-filter: saturate(180%) blur(10px);
 
     height: 1fr;
     width: 8fr;
@@ -215,12 +258,16 @@ button:active{
 /* Menu items */
 
 .menu_item{
+
+    overflow:hidden;
     border:1px solid black;
     border-radius: 10px;
     width: 25%;
     height: 40vh;
     text-align:center;
 
+    background-image: url(/img/food/Dining-Options_Header.jpeg);
+    background-size:100% 100%;
 
     display:grid;
     grid-template-columns: 3fr 1fr;
@@ -230,27 +277,26 @@ button:active{
     'itemimg itemimg'
     'itemdesc itemdesc'
     'itemprice itemprice';
-
-    background-image:url(/img/persons/davidfrontfacing.png);
     background-size: 100% 100%;
-    mix-blend-mode:color-burn;
 }
 
 .itemtitle{
     grid-area:itemtitle;
     text-align:center;
+    backdrop-filter: blur(var(--backdropfilter));
 }
 
 .itemimg{
     grid-area:itemimg;
-    border:1px black solid;
-    text-align:center;
-    text-justify:center;
-
 }
 .itemdesc{
     grid-area:itemdesc;
+    backdrop-filter: blur(var(--backdropfilter));
 }
 .itemprice{
+    font-weight:900;
+    font-size:1.25em;
+    text-align:center;
     grid-area:itemprice;
+    backdrop-filter: blur(20px);
 }

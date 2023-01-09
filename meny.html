@@ -7,28 +7,15 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title> Restaurang Zooters</title>
     <link rel="stylesheet" href="css/style.css">
-    <script>
-        function lunch() {
-            alert("Lunch!!!!")
-            var element = document.getElementById('');
-            element.classList.toggle("lunchfocus");
-        }
-        function middag() {
-            alert("Middag")
-        }
-        function extra() {
-            alert("Tillägg")
-        }
-    </script>
 </head>
 
-<body class="menu">
+<body class="menu" onload="startup();">
     <header>
         <h3> <a href="omoss.html">Om oss</a></h3>
         <div class="title">
             <h1>Zooters meny</h1>
         </div>
-        <h3> <a href="meny.html"> Meny</a></h3>
+        <h3> <a href="index.html"> Hem</a></h3>
     </header>
     <div class="wrapper" id="menu_page">
 
@@ -39,6 +26,13 @@
         </section>
 
         <script>
+
+                
+            function startup() {
+                document.getElementById('middag').style.visibility = 'hidden';
+                document.getElementById('extras').style.visibility = 'hidden';
+                document.getElementById('lunch').style.visibility = 'visible';
+            }
 
             function menu_page_change(e) {
                 console.log(e.value);
@@ -66,37 +60,37 @@
 
                 <article class="menu_item">
                    <div class="itemtitle"> <h2>Lunch item</h2></div>
-                   <div class="itemimg"> Image</div>
+                   <div class="itemimg"> </div>
                    <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
                    <div class="itemprice"> 5kr</div>
                 </article>
                 <article class="menu_item">
                     <div class="itemtitle"> <h2>Lunch item</h2></div>
-                    <div class="itemimg"> Image</div>
+                    <div class="itemimg"> </div>
                     <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
                     <div class="itemprice"> 5kr</div>
                  </article>
                  <article class="menu_item">
                     <div class="itemtitle"> <h2>Lunch item</h2></div>
-                    <div class="itemimg"> Image</div>
+                    <div class="itemimg"> </div>
                     <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
                     <div class="itemprice"> 5kr</div>
                  </article>
                  <article class="menu_item">
                     <div class="itemtitle"> <h2>Lunch item</h2></div>
-                    <div class="itemimg"> Image</div>
+                    <div class="itemimg"> </div>
                     <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
                     <div class="itemprice"> 5kr</div>
                  </article>
                  <article class="menu_item">
                     <div class="itemtitle"> <h2>Lunch item</h2></div>
-                    <div class="itemimg"> Image</div>
+                    <div class="itemimg"> </div>
                     <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
                     <div class="itemprice"> 5kr</div>
                  </article>
                  <article class="menu_item">
                     <div class="itemtitle"> <h2>Lunch item</h2></div>
-                    <div class="itemimg"> Image</div>
+                    <div class="itemimg"> </div>
                     <div class="itemdesc"> Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ad rem voluptas error facilis eius incidunt dignissimos officia id magni iste.</div>
                     <div class="itemprice"> 5kr</div>
                  </article>
